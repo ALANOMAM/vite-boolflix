@@ -4,6 +4,7 @@ import axios from 'axios'
 import {store} from './store'
 import AppHeader from './components/AppHeader.vue'
 import AppLayout from './components/AppLayout.vue'
+
 export default{
   
   components:{
@@ -26,8 +27,26 @@ export default{
         this.store.movies = res.data.results
        
     })
-  },
+
+
+   
+    axios.get('https://api.themoviedb.org/3/search/tv?api_key=756ab663684b23166a50d98c73cd1472&query=ritorno+al+futuro')
+    .then(res=> {
+   
+        //console.log(res.data.results)
+        // salvo i vari oggetti legati alle serie nel mio array "series" nel file "store.js"
+         this.store.series = res.data.results
+        // console.log(this.store.series)
+       
+    })
+
+
+  }
+
 }
+
+
+
 </script>
 
 <template>
