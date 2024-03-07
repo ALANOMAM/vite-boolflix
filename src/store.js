@@ -9,5 +9,7 @@ export const store = reactive({
    
    moviesImage:[],
 
-   seriesImage:[]
+   seriesImage:[],
+
+   movieName:''
 });   

@@ -8,6 +8,10 @@ export default{
     return{
       store,
     }
+  },
+
+  methods:{
+  
   }
 }
 </script>
@@ -17,8 +21,8 @@ export default{
         <span>BOOLFLIX</span>
 
          <div class="ricerca">
-        <input type="text" placeholder="Scrivi nome film">
-        <button>Cerca</button>
+        <input type="text" placeholder="Scrivi nome film" v-model="store.movieName">
+        <button @click="$emit('search')">Cerca</button>
         </div>
     
     </div>
