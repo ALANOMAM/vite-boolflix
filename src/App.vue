@@ -27,6 +27,14 @@ export default{
         //console.log(res.data.results[0].poster_path)
         // salvo i vari oggetti legati al film nel mio array "movies" nel file "store.js"
         this.store.movies = res.data.results
+
+        //pusho i link (stavolta completi) che mi indirizzano verso le immagini 
+        //li pusho tutti dentro il mio array "moviesImage" dentro il mio file "store.js"
+       for(let i=0; i < res.data.results.length ; i++){
+       this.store.moviesImage.push('https://image.tmdb.org/t/p/w342'+res.data.results[i].poster_path)
+        }
+
+       //console.log(this.store.moviesImage)
        
     })
 
@@ -39,6 +47,14 @@ export default{
         // salvo i vari oggetti legati alle serie nel mio array "series" nel file "store.js"
          this.store.series = res.data.results
         // console.log(this.store.series)
+
+        //pusho i link (stavolta completi) che mi indirizzano verso le immagini 
+        //li pusho tutti dentro il mio array "seriesImage" dentro il mio file "store.js"
+       for(let i=0; i < res.data.results.length ; i++){
+       this.store.seriesImage.push('https://image.tmdb.org/t/p/w342'+res.data.results[i].poster_path)
+        }
+
+      // console.log(this.store.seriesImage)
        
     })
 

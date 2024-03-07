@@ -7,24 +7,27 @@ export default{
      data(){
         return {
             store,
+            image:''
         }
-     }
+     },
+
+     
 }
 </script>
 
 <template>
     <span>FILM</span>
     <div class="container">
-    <div v-for="movie in store.movies" class="film-box">
-    <div  class="film">
-    <span>qui ci andrà l'immagine</span>
+    <div v-for="(movie, index) in store.movies" class="film-box">
+     <!--accedo a tutte le immagini dei film che sono dentro il mio array "moviesImage" nel "store.js"-->   
+    <img :src="store.moviesImage[index]" alt="">
     <span>{{movie.title }}</span>
     <span>{{movie.original_title }}</span>
     <span>{{movie.original_language }}</span>
     <span>{{movie.vote_average }}</span>
     </div>
     </div>
-    </div>
+
 </template>
 
 

@@ -16,9 +16,10 @@ export default{
  
    <span>SERIE</span>
     <div class="container">
-    <div v-for="serie in store.series" class="series-box">
+    <div v-for="(serie, index) in store.series" class="series-box">
     <div  class="series">
-    <span>qui ci andrà l'immagine</span>
+    <!--accedo a tutte le immagini delle serie che sono dentro il mio array "seriesImage" nel "store.js"-->  
+    <img :src="this.store.seriesImage[index]" alt="">
     <span>{{serie.name }}</span>
     <span>{{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>

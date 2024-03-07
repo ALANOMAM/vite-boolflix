@@ -5,6 +5,9 @@ export const store = reactive({
    movies:[],
 
    /*dove salvo gli oggetti con i dati delle serie assciate al nome che cerco*/
-   series:[]
+   series:[],
    
-});
+   moviesImage:[],
+
+   seriesImage:[]
+});   
