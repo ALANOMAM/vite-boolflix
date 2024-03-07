@@ -3,10 +3,12 @@
 import axios from 'axios'
 import {store} from './store'
 import AppHeader from './components/AppHeader.vue'
+import AppLayout from './components/AppLayout.vue'
 export default{
   
   components:{
     AppHeader,
+    AppLayout,
   },
 
   data(){
@@ -30,6 +32,7 @@ export default{
 
 <template>
   <AppHeader></AppHeader>
+  <AppLayout></AppLayout>
 </template>
 
 <style>
