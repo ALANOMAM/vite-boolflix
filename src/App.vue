@@ -31,7 +31,7 @@ export default{
         //pusho i link (stavolta completi) che mi indirizzano verso le immagini 
         //li pusho tutti dentro il mio array "moviesImage" dentro il mio file "store.js"
        for(let i=0; i < res.data.results.length ; i++){
-       this.store.moviesImage.push('https://image.tmdb.org/t/p/w342'+res.data.results[i].poster_path)
+       this.store.moviesImage.push('https://image.tmdb.org/t/p/w200'+res.data.results[i].poster_path)
         }
 
        //console.log(this.store.moviesImage)
@@ -51,7 +51,7 @@ export default{
         //pusho i link (stavolta completi) che mi indirizzano verso le immagini 
         //li pusho tutti dentro il mio array "seriesImage" dentro il mio file "store.js"
        for(let i=0; i < res.data.results.length ; i++){
-       this.store.seriesImage.push('https://image.tmdb.org/t/p/w342'+res.data.results[i].poster_path)
+       this.store.seriesImage.push('https://image.tmdb.org/t/p/w200'+res.data.results[i].poster_path)
         }
 
       // console.log(this.store.seriesImage)

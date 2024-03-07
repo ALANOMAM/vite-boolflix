@@ -14,7 +14,7 @@ export default{
 
 <template>
  
-   <span>SERIE</span>
+   <span class="category">SERIE</span>
     <div class="container">
     <div v-for="(serie, index) in store.series" class="series-box">
     <div  class="series">
@@ -30,22 +30,38 @@ export default{
 </template>
 
 
-<style>
+<style lang="scss">
+
+.category{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    
+}
 
 .series-box{
-    width: calc(100% /2 );
+    padding: 10px;
+    width: calc(100% /4 );
     display: flex;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     justify-content: center;
     /*padding: 20px;*/
 }
 
 .series{
-  border: 1px red solid;
+ width:100% ;
+   /*border: 1px red solid;*/
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items: center;
+  img{
+    width: 100%;
+  }
 }
 
 </style>
