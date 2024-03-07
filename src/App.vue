@@ -19,6 +19,8 @@ export default{
   },
 
   created(){
+    //chiamata API per i film associati al titolo che cerco
+
     axios.get('https://api.themoviedb.org/3/search/movie?api_key=756ab663684b23166a50d98c73cd1472&query=ritorno+al+futuro')
     .then(res=> {
    
@@ -29,7 +31,7 @@ export default{
     })
 
 
-   
+      //chiamata API per le serie associate al titolo che cerco
     axios.get('https://api.themoviedb.org/3/search/tv?api_key=756ab663684b23166a50d98c73cd1472&query=ritorno+al+futuro')
     .then(res=> {
    
@@ -44,8 +46,6 @@ export default{
   }
 
 }
-
-
 
 </script>
 

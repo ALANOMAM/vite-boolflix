@@ -21,12 +21,23 @@ export default{
 
 <template>
 <div class="layout">
-   <AppFilm></AppFilm>
-   <AppSeries></AppSeries>
+    
+<AppFilm></AppFilm>
+
+<AppSeries></AppSeries>
+
 </div>
 
 </template>
 
 <style>
+.layout{
+    /* display:flex ;
+    flex-wrap: wrap;*/
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 </style>

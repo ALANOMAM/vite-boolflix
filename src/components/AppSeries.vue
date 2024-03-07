@@ -14,17 +14,18 @@ export default{
 
 <template>
  
- <div>SERIE</div>
+   <span>SERIE</span>
+    <div class="container">
     <div v-for="serie in store.series" class="series-box">
     <div  class="series">
     <span>qui ci andrà l'immagine</span>
-    <span>{{serie.title }}</span>
-    <span>{{serie.original_title }}</span>
+    <span>{{serie.name }}</span>
+    <span>{{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>
     <span>{{serie.vote_average }}</span>
     </div>
     </div>
-
+    </div>
 </template>
 
 

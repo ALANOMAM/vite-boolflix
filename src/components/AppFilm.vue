@@ -13,8 +13,8 @@ export default{
 </script>
 
 <template>
-
-<div>FILM</div>
+    <span>FILM</span>
+    <div class="container">
     <div v-for="movie in store.movies" class="film-box">
     <div  class="film">
     <span>qui ci andrà l'immagine</span>
@@ -24,11 +24,17 @@ export default{
     <span>{{movie.vote_average }}</span>
     </div>
     </div>
-
+    </div>
 </template>
 
 
 <style>
+
+.container{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
 .film-box{
     width: calc(100% /2 );
     display: flex;
