@@ -17,9 +17,11 @@ export default{
    <span class="category">SERIE</span>
     <div class="container">
     <div v-for="(serie, index) in store.series" class="series-box">
-    <div  class="series">
     <!--accedo a tutte le immagini delle serie che sono dentro il mio array "seriesImage" nel "store.js"-->  
     <img :src="this.store.seriesImage[index]" alt="">
+
+    <!--series info start-->
+    <div  class="series-info">
     <span> <strong>Titolo:</strong> {{serie.name }}</span>
     <span> <strong>Titolo originale:</strong> {{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>
@@ -35,6 +37,8 @@ export default{
      </div>
     <!--contenitore overwiew end-->
     </div>
+    <!--series info end-->
+    
     </div>
     </div>
 
@@ -64,21 +68,20 @@ export default{
     padding: 10px;
     width: calc(100% /4 );
     display: flex;
-    /*border: 1px solid blue;*/
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid blue;
     justify-content: center;
     /*padding: 20px;*/
 }
 
-.series{
+.series-info{
  width:100% ;
-   /*border: 1px red solid;*/
+border: 1px red solid;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  align-items: center;
-  img{
-    width: 100%;
-  }
+  align-items: flex-start;
 }
 
 .voto{

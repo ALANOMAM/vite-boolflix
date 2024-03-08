@@ -23,7 +23,7 @@ export default{
    created(){
     //chiamata API per i film associati al titolo che cerco
 
-    axios.get('https://api.themoviedb.org/3/search/movie?api_key=756ab663684b23166a50d98c73cd1472&query=ritorno+al+futuro') 
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=756ab663684b23166a50d98c73cd1472&language=it_IT&query=ritorno+al+futuro') 
     .then(res=> {
    
         //console.log(res.data.results[0].poster_path)
