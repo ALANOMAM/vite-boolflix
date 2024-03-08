@@ -75,7 +75,7 @@ export default{
      display: flex;
      flex-direction: column;
      gap: 10px;
-   border: 1px solid blue;
+  /* border: 1px solid blue;*/
     justify-content: center;
     padding: 10px;
     
@@ -83,15 +83,24 @@ export default{
 
 .film-info{
   /*width: 100%;*/
-  border: 1px red solid;
+ /* border: 1px red solid;*/
   position: absolute;
   top:10px;
+  right: 10px;
+  left: 10px;
   bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items:flex-start;
- 
+  background-color:darkred;
+  padding: 5px;
+  opacity: 0;
+}
+
+.film-info:hover{
+    opacity: 1;
+    transition: 1s;
 }
 
 .voto{

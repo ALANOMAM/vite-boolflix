@@ -71,21 +71,31 @@ export default{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 1px solid blue;
+   /* border: 1px solid blue;*/
     justify-content: center;
     /*padding: 20px;*/
 }
 
 .series-info{
  /*width:100% ;*/
-border: 1px red solid;
+/*border: 1px red solid;*/
+  padding: 5px;
   display: flex;
   flex-direction: column;
   position: absolute;
   top:10px;
+  right: 10px;
+  left: 10px;
   bottom: 0;
   gap: 5px;
   align-items: flex-start;
+  background-color: darkred;
+  opacity: 0;
+}
+
+.series-info:hover{
+  opacity: 1;
+  transition: 1s;
 }
 
 .voto{
