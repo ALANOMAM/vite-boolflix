@@ -26,13 +26,14 @@ export default{
     <div class="film">
      <!--accedo a tutte le immagini dei film che sono dentro il mio array "moviesImage" nel "store.js"-->   
     <img :src="store.moviesImage[index]" alt="">
-    <span>Titolo: {{movie.title }}</span>
-    <span>Titolo originale: {{movie.original_title }}</span>
+    <span><strong>Titolo: </strong>{{movie.title }}</span>
+    <span><strong>Titolo originale: </strong>{{movie.original_title }}</span>
     <span>{{movie.original_language }}</span>
     <div class="voto">
-    <span>Voto: </span>
+    <span><strong>Voto: </strong></span>
     <span v-for=" star in Math.floor((movie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
     </div>
+    <span><strong>Overview: </strong>{{movie.overview}}</span>
     </div>
     </div>
     </div>

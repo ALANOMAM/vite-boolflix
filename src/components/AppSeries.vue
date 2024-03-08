@@ -20,13 +20,14 @@ export default{
     <div  class="series">
     <!--accedo a tutte le immagini delle serie che sono dentro il mio array "seriesImage" nel "store.js"-->  
     <img :src="this.store.seriesImage[index]" alt="">
-    <span>{{serie.name }}</span>
-    <span>{{serie.original_name }}</span>
+    <span> <strong>Titolo:</strong> {{serie.name }}</span>
+    <span> <strong>Titolo originale:</strong> {{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>
     <div class="voto">
-    <span>Voto: </span>
+    <span> <strong>Voto: </strong></span>
     <span v-for=" star in Math.floor((serie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
     </div>
+    <span><strong>Overview: </strong>{{serie.overview }}</span>
     </div>
     </div>
     </div>
