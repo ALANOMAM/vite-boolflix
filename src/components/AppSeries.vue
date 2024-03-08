@@ -38,7 +38,7 @@ export default{
     <!--contenitore overwiew end-->
     </div>
     <!--series info end-->
-    
+
     </div>
     </div>
 
@@ -65,6 +65,7 @@ export default{
 }
 
 .series-box{
+    position: relative;
     padding: 10px;
     width: calc(100% /4 );
     display: flex;
@@ -76,10 +77,13 @@ export default{
 }
 
 .series-info{
- width:100% ;
+ /*width:100% ;*/
 border: 1px red solid;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top:10px;
+  bottom: 0;
   gap: 5px;
   align-items: flex-start;
 }
@@ -91,7 +95,7 @@ border: 1px red solid;
 }
 
 .overview-box{
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
 }
 </style>

@@ -64,13 +64,13 @@ export default{
 }
 
 .container{
-    
     display: flex;
     flex-wrap: wrap;
 }
 
 
 .film-box{
+    position: relative;
     width: calc(100% /4 );
      display: flex;
      flex-direction: column;
@@ -82,8 +82,11 @@ export default{
 }
 
 .film-info{
-  width: 100%;
+  /*width: 100%;*/
   border: 1px red solid;
+  position: absolute;
+  top:10px;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -98,7 +101,7 @@ export default{
 }
 
 .overview-box{
-    height: 200px;
+    height:300px;
     overflow-y: auto;
 }
 </style>
