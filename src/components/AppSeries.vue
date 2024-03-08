@@ -24,7 +24,16 @@ export default{
     <div  class="series-info">
     <span> <strong>Titolo:</strong> {{serie.name }}</span>
     <span> <strong>Titolo originale:</strong> {{serie.original_name }}</span>
-    <span>{{serie.original_language }}</span>
+    <!--country flag start-->
+    <div class="country-flag">
+    <span><strong>Country: </strong></span>
+    <span v-if="serie.original_language === 'en'"><img src="../../public/img/usa2.png" alt=""></span>
+    <span v-else-if="serie.original_language === 'ja'"><img src="../../public/img/japan2.png" alt=""></span>
+    <span v-else-if="serie.original_language === 'fr'"><img src="../../public/img/france.png" alt=""></span>
+    <span v-else-if="serie.original_language === 'de'"><img src="../../public/img/german.png" alt=""></span>
+    <span v-else>{{ serie.original_language }}</span>
+    </div> 
+    <!--country flag end--> 
     <!--contentore voto start-->
     <div class="voto">
     <span> <strong>Voto: </strong></span>
@@ -45,7 +54,7 @@ export default{
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .category{
     display: inline-block;
@@ -90,13 +99,13 @@ export default{
   gap: 5px;
   align-items: flex-start;
   background-color: darkred;
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
-.series-info:hover{
+/*.series-info:hover{
   opacity: 1;
   transition: 1s;
-}
+}*/
 
 .voto{
     i{
@@ -107,5 +116,14 @@ export default{
 .overview-box{
     height: 300px;
     overflow-y: auto;
+}
+
+.country-flag{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img{
+        width: 50px;
+    }
 }
 </style>

@@ -30,7 +30,16 @@ export default{
     <div class="film-info"> 
     <span><strong>Titolo: </strong>{{movie.title }}</span>
     <span><strong>Titolo originale: </strong>{{movie.original_title }}</span>
-    <span>{{movie.original_language }}</span>
+    <!--country flag start-->
+    <div class="country-flag">
+    <span><strong>Country: </strong></span>
+    <span v-if="movie.original_language === 'en'"><img src="../../public/img/usa2.png" alt=""></span>
+    <span v-else-if="movie.original_language === 'ja'"><img src="../../public/img/japan2.png" alt=""></span>
+    <span v-else-if="movie.original_language === 'fr'"><img src="../../public/img/france.png" alt=""></span>
+    <span v-else-if="movie.original_language === 'de'"><img src="../../public/img/german.png" alt=""></span>
+    <span v-else>{{ movie.original_language }}</span>
+    </div> 
+    <!--country flag end--> 
     <!--contentore voto start-->
     <div class="voto">
     <span><strong>Voto: </strong></span>
@@ -50,7 +59,7 @@ export default{
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .category{
     display: inline-block;
@@ -95,13 +104,13 @@ export default{
   align-items:flex-start;
   background-color:darkred;
   padding: 5px;
-  opacity: 0;
+  /* opacity: 0;*/
 }
 
-.film-info:hover{
+/*.film-info:hover{
     opacity: 1;
     transition: 1s;
-}
+}*/
 
 .voto{
     i{
@@ -112,5 +121,14 @@ export default{
 .overview-box{
     height:300px;
     overflow-y: auto;
+}
+
+.country-flag{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img{
+        width: 50px;
+    }
 }
 </style>
