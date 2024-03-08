@@ -23,7 +23,10 @@ export default{
     <span>{{serie.name }}</span>
     <span>{{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>
-    <span>{{serie.vote_average }}</span>
+    <div class="voto">
+    <span>Voto: </span>
+    <span v-for=" star in Math.floor((serie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
+    </div>
     </div>
     </div>
     </div>
@@ -41,6 +44,12 @@ export default{
     background-color: red;
     color: white;
     
+}
+
+.container{
+    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .series-box{
@@ -62,6 +71,12 @@ export default{
   img{
     width: 100%;
   }
+}
+
+.voto{
+    i{
+    color:orange;
+    }
 }
 
 </style>

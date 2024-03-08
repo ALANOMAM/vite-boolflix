@@ -11,6 +11,10 @@ export default{
         }
      },
 
+     methods:{
+
+     }
+
      
 }
 </script>
@@ -22,10 +26,13 @@ export default{
     <div class="film">
      <!--accedo a tutte le immagini dei film che sono dentro il mio array "moviesImage" nel "store.js"-->   
     <img :src="store.moviesImage[index]" alt="">
-    <span>{{movie.title }}</span>
-    <span>{{movie.original_title }}</span>
+    <span>Titolo: {{movie.title }}</span>
+    <span>Titolo originale: {{movie.original_title }}</span>
     <span>{{movie.original_language }}</span>
-    <span>{{movie.vote_average }}</span>
+    <div class="voto">
+    <span>Voto: </span>
+    <span v-for=" star in Math.floor((movie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
+    </div>
     </div>
     </div>
     </div>
@@ -35,11 +42,24 @@ export default{
 
 <style lang="scss">
 
+.category{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    
+}
+
 .container{
     
     display: flex;
     flex-wrap: wrap;
 }
+
+
 .film-box{
     width: calc(100% /4 );
      display: flex;
@@ -61,4 +81,9 @@ export default{
   }
 }
 
+.voto{
+    i{
+    color:orange;
+    }
+}
 </style>
