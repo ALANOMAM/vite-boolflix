@@ -29,11 +29,17 @@ export default{
     <span><strong>Titolo: </strong>{{movie.title }}</span>
     <span><strong>Titolo originale: </strong>{{movie.original_title }}</span>
     <span>{{movie.original_language }}</span>
+    <!--contentore voto start-->
     <div class="voto">
     <span><strong>Voto: </strong></span>
     <span v-for=" star in Math.floor((movie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
     </div>
+    <!--contentore voto end-->
+    <!--contenitore overwiew start (messo per limitare lestensione di overview troppo lunghi)-->
+     <div class="overview-box">
     <span><strong>Overview: </strong>{{movie.overview}}</span>
+     </div>
+    <!--contenitore overwiew end-->
     </div>
     </div>
     </div>
@@ -86,5 +92,10 @@ export default{
     i{
     color:orange;
     }
+}
+
+.overview-box{
+    height: 200px;
+    overflow-y: auto;
 }
 </style>

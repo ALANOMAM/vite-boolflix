@@ -23,14 +23,21 @@ export default{
     <span> <strong>Titolo:</strong> {{serie.name }}</span>
     <span> <strong>Titolo originale:</strong> {{serie.original_name }}</span>
     <span>{{serie.original_language }}</span>
+    <!--contentore voto start-->
     <div class="voto">
     <span> <strong>Voto: </strong></span>
     <span v-for=" star in Math.floor((serie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
     </div>
-    <span><strong>Overview: </strong>{{serie.overview }}</span>
+    <!--contentore voto end-->
+   <!--contenitore overwiew start (messo per limitare lestensione di overview troppo lunghi)-->
+   <div class="overview-box">
+    <span><strong>Overview: </strong>{{serie.overview}}</span>
+     </div>
+    <!--contenitore overwiew end-->
     </div>
     </div>
     </div>
+
 </template>
 
 
@@ -80,4 +87,8 @@ export default{
     }
 }
 
+.overview-box{
+    height: 200px;
+    overflow-y: auto;
+}
 </style>
