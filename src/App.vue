@@ -19,7 +19,7 @@ export default{
   },
 
   
-
+/*
    created(){
     //chiamata API per i film associati al titolo che cerco
 
@@ -61,7 +61,7 @@ export default{
     })
 
 
-  },  
+  },  */
 
   methods:{
     filterMovie(){

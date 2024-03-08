@@ -21,7 +21,7 @@ export default{
         <span>BOOLFLIX</span>
 
          <div class="ricerca">
-        <input type="text" placeholder="Scrivi nome film" v-model="store.movieName">
+        <input type="text" placeholder="Scrivi il nome di un film" v-model="store.movieName">
         <button @click="$emit('search')">Cerca</button>
         </div>
     

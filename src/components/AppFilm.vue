@@ -7,7 +7,7 @@ export default{
      data(){
         return {
             store,
-            image:''
+            image:'',
         }
      },
 
@@ -43,7 +43,18 @@ export default{
     <!--contentore voto start-->
     <div class="voto">
     <span><strong>Voto: </strong></span>
-    <span v-for=" star in Math.floor((movie.vote_average*5)/10)"><i class="fa-regular fa-star"></i></span> 
+    <p>
+    <span v-if="Math.floor((movie.vote_average*5)/10) >= 1" class="fas fa-star"></span>
+    <span v-else class="far fa-star"></span>
+    <span v-if="Math.floor((movie.vote_average*5)/10) >= 2" class="fas fa-star"></span>
+    <span v-else class="far fa-star"></span>
+    <span v-if="Math.floor((movie.vote_average*5)/10) >= 3" class="fas fa-star"></span>
+    <span v-else class="far fa-star"></span>
+    <span v-if="Math.floor((movie.vote_average*5)/10) >= 4" class="fas fa-star"></span>
+    <span v-else class="far fa-star"></span>
+    <span v-if="Math.floor((movie.vote_average*5)/10) >= 5" class="fas fa-star"></span>
+    <span v-else class="far fa-star"></span>
+    </p>
     </div>
     <!--contentore voto end-->
     <!--contenitore overwiew start (messo per limitare lestensione di overview troppo lunghi)-->
@@ -104,13 +115,13 @@ export default{
   align-items:flex-start;
   background-color:darkred;
   padding: 5px;
-  /* opacity: 0;*/
+  opacity: 0;
 }
 
-/*.film-info:hover{
+.film-info:hover{
     opacity: 1;
     transition: 1s;
-}*/
+}
 
 .voto{
     i{
